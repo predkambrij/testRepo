@@ -41,5 +41,5 @@ jobs:
           #upload_url: ${{ steps.create_release.outputs.upload_url }}
           upload_url: https://uploads.github.com/repos/predkambrij/testRepo/releases/25427353/assets{?name,label}
           asset_path: ./artifact.zip
-          asset_name: artifact_${{ steps.dockerstep.outputs.time2 }}.zip
+          asset_name: artifact_${{ steps.dockerstep.outputs.gitbranchname }}_${{ steps.dockerstep.outputs.time2 }}_${{ steps.dockerstep.outputs.gitsha }}.zip
           asset_content_type: application/zip
