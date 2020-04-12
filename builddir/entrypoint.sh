@@ -7,7 +7,7 @@ mkdir output
 touch output/blaOutput
 
 zip -r artifact.zip output
-
+# x
 echo "Hello $*"
 time=$(date)
 time2=$(date +%s)
