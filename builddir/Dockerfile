@@ -1,7 +1,7 @@
 FROM ubuntu:latest
 
 RUN apt-get update && \
-    ap-get install -y zip && \
+    apt-get install -y zip && \
     true
 
 COPY entrypoint.sh /entrypoint.sh
