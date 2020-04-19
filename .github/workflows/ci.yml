@@ -48,3 +48,8 @@ jobs:
           asset_path: ./artifact.zip
           asset_name: artifact_${{ steps.dockerstep.outputs.gitbranchname }}_${{ steps.dockerstep.outputs.time2 }}_${{ steps.dockerstep.outputs.gitsha }}.zip
           asset_content_type: application/zip
+      - name: Call kataster hook
+        id: kataster_hook
+        if: github.ref == 'refs/heads/master'
+        shell: bash
+        run: curl --silent --output /dev/null http://example.com
